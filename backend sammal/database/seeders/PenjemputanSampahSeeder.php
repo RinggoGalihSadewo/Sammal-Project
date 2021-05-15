@@ -55,7 +55,7 @@ class PenjemputanSampahSeeder extends Seeder
             ],
             [
                 'driver_id' => 5,
-                'jemput_id' => 5,
+                'jemput_id' => 4,
                 'foto_driver' => 'foto_driver5.png',
                 'nama_driver' => 'sugiyono',
                 'plat_nomor' => 'BE2526AYO',
