@@ -14,7 +14,7 @@ class CreateBuangSampahsTable extends Migration
     public function up()
     {
         Schema::create('buang_sampahs', function (Blueprint $table) {
-            $table->increments('jemput_id');
+            $table->id('jemput_id');
             $table->integer('user_id')->unsigned();
             $table->dateTime('waktu_jemput');
             $table->string('lokasi_jemput', 100);
