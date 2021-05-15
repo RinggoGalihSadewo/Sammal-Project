@@ -80,6 +80,7 @@ $app->configure('app');
 
 $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
+    'user' => App\Http\Middleware\UserMiddleware::class
 ]);
 
 /*

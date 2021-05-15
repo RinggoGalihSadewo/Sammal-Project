@@ -27,7 +27,9 @@ $router->get('/', function () use ($router) {
 
 // $router->post('user/{id}', 'UserController@create');
 
-$router->group(['prefix' => 'api'], function () use ($router) {
+$router->get('login', ['uses' => 'LoginController@index']);
+
+$router->group(['prefix' => 'api', 'middleware' => 'user'], function () use ($router) {
 
     $router->get('User', ['uses' => 'UserController@index']);
     $router->get('User/{id}', ['uses' => 'UserController@show']);

@@ -31,11 +31,13 @@ class BiayaJemputSeeder extends Seeder
             ],
             [
                 'jumlah_biaya' => '40000',
+                'jemput_id' => 1,
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'jumlah_biaya' => '50000',
+                'jemput_id' => 1,
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
