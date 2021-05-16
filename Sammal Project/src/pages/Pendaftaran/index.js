@@ -31,6 +31,11 @@ const Pendaftaran = ({navigation}) =>  {
           <TextInput style={styles.input}/>
         </View>
 
+        <View style={styles.formConfirmPassword}>
+          <Text style={{fontSize: 14, marginLeft: 5}}>Kecamatan</Text>
+          <TextInput style={styles.input}/>
+        </View>
+
         <View style={styles.btnDaftar}>
           <Button
             title="DAFTAR"
