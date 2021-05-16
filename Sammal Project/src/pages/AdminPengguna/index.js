@@ -25,7 +25,7 @@ const AdminPengguna = ({navigation}) =>{
 				<View style={{alignItems: 'center'}}>
 				<View style={{flexDirection: 'row'}}>
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile}>
+				<TouchableOpacity style={styles.contentFotoProfile} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -38,7 +38,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -51,7 +51,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -64,7 +64,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{alignItems: 'center', marginTop: -0.5}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 				<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -84,7 +84,7 @@ const AdminPengguna = ({navigation}) =>{
 				<View style={{alignItems: 'center'}}>
 				<View style={{flexDirection: 'row'}}>
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile}>
+				<TouchableOpacity style={styles.contentFotoProfile} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -97,7 +97,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -110,7 +110,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -123,7 +123,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{alignItems: 'center', marginTop: -0.5}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 				<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -143,7 +143,7 @@ const AdminPengguna = ({navigation}) =>{
 				<View style={{alignItems: 'center'}}>
 				<View style={{flexDirection: 'row'}}>
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile}>
+				<TouchableOpacity style={styles.contentFotoProfile} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -156,7 +156,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -169,7 +169,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -182,7 +182,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{alignItems: 'center', marginTop: -0.5}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 				<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -202,7 +202,7 @@ const AdminPengguna = ({navigation}) =>{
 				<View style={{alignItems: 'center'}}>
 				<View style={{flexDirection: 'row'}}>
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile}>
+				<TouchableOpacity style={styles.contentFotoProfile} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -215,7 +215,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -228,7 +228,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -241,7 +241,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{alignItems: 'center', marginTop: -0.5}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 				<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -261,7 +261,7 @@ const AdminPengguna = ({navigation}) =>{
 				<View style={{alignItems: 'center'}}>
 				<View style={{flexDirection: 'row'}}>
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile}>
+				<TouchableOpacity style={styles.contentFotoProfile} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -274,7 +274,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -287,7 +287,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -300,7 +300,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{alignItems: 'center', marginTop: -0.5}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 				<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -320,7 +320,7 @@ const AdminPengguna = ({navigation}) =>{
 				<View style={{alignItems: 'center'}}>
 				<View style={{flexDirection: 'row'}}>
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile}>
+				<TouchableOpacity style={styles.contentFotoProfile} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -333,7 +333,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -346,7 +346,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -359,7 +359,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{alignItems: 'center', marginTop: -0.5}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 				<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -379,7 +379,7 @@ const AdminPengguna = ({navigation}) =>{
 				<View style={{alignItems: 'center'}}>
 				<View style={{flexDirection: 'row'}}>
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile}>
+				<TouchableOpacity style={styles.contentFotoProfile} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -392,7 +392,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -405,7 +405,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{justifyContent: 'center', alignItems: 'center'}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 					<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image
@@ -418,7 +418,7 @@ const AdminPengguna = ({navigation}) =>{
 				</View>
 
 				<View style={{alignItems: 'center', marginTop: -0.5}}>
-				<TouchableOpacity style={styles.contentFotoProfile2}>
+				<TouchableOpacity style={styles.contentFotoProfile2} onPress={() => navigation.navigate('AdminDataPengguna')}>
 				<View style={{alignItems: 'center', justifyContent: 'center'}}>
 						<View style={styles.fotoProfile}>
 							<Image

@@ -79,7 +79,7 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', width: 300}}>
       <View style={styles.imageTukar}>
-		<View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
+		{/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
 					source={require('../../assets/min.png')}
@@ -93,7 +93,7 @@ const HomeTukar = ({navigation}) =>  {
 					source={require('../../assets/plus.png')}
 				/>
 			</TouchableOpacity>						
-		</View>
+		</View> */}
       </View>
 
       <View style={{height: 67, marginTop: 17, width: 84, marginLeft: 17}}>
@@ -114,7 +114,7 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', marginTop: 10, width: 300}}>
       <View style={styles.imageTukar}>
-	  <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
+	  {/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
 					source={require('../../assets/min.png')}
@@ -128,7 +128,7 @@ const HomeTukar = ({navigation}) =>  {
 					source={require('../../assets/plus.png')}
 				/>
 			</TouchableOpacity>						
-		</View>
+		</View> */}
       </View>
 
       <View style={{height: 67, marginTop: 17, width: 84, marginLeft: 17}}>
@@ -149,7 +149,7 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', marginTop: 10, width: 300}}>
       <View style={styles.imageTukar}>
-	  <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
+	  {/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
 					source={require('../../assets/min.png')}
@@ -163,7 +163,7 @@ const HomeTukar = ({navigation}) =>  {
 					source={require('../../assets/plus.png')}
 				/>
 			</TouchableOpacity>						
-		</View>
+		</View> */}
       </View>
 
       <View style={{height: 67, marginTop: 17, width: 84, marginLeft: 17}}>
@@ -184,7 +184,7 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', marginTop: 10, width: 300 }}>
       <View style={styles.imageTukar}>
-	  <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
+	  {/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
 					source={require('../../assets/min.png')}
@@ -198,7 +198,7 @@ const HomeTukar = ({navigation}) =>  {
 					source={require('../../assets/plus.png')}
 				/>
 			</TouchableOpacity>						
-		</View>
+		</View> */}
       </View>
 
       <View style={{height: 67, marginTop: 17, width: 84, marginLeft: 17}}>
@@ -219,7 +219,7 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', marginTop: 10, width: 300}}>
       <View style={styles.imageTukar}>
-	  <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
+	  {/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
 					source={require('../../assets/min.png')}
@@ -233,7 +233,7 @@ const HomeTukar = ({navigation}) =>  {
 					source={require('../../assets/plus.png')}
 				/>
 			</TouchableOpacity>						
-		</View>
+		</View> */}
       </View>
 
       <View style={{height: 67, marginTop: 17, width: 84, marginLeft: 17}}>

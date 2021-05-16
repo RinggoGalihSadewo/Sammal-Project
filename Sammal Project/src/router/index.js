@@ -2,8 +2,8 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { 
     SplashScreen, LandingPage1, AdminDataPengguna, AdminHome, AdminMateri, AdminPengguna, 
-    AdminPesananBaruMasuk, AdminPesanKonfirmasi, BuangSampah, EmailTerdaftar, EmailVerifi, HomeBeranda, 
-    HomeGuide, HomeMateri, HomeTukar, LandingPage2, Login, Pendaftaran, Profile, Sidebar, UbahProfile } from '../pages';
+    AdminPesananBaruMasuk, AdminPesanKonfirmasi, AdminKonfirmasiDriver,  BuangSampah, EmailTerdaftar, EmailVerifi, HomeBeranda, 
+    HomeGuide, HomeMateri, HomeTukar, LandingPage2, Login, Pendaftaran, Profile, Sidebar, UbahProfile, DapatPenjemputan } from '../pages';
 
 
 const Stack = createStackNavigator();
@@ -20,7 +20,9 @@ const Router = () => {
             <Stack.Screen name="AdminPengguna" component={AdminPengguna} options={{headerShown: false}}/>
             <Stack.Screen name="AdminPesananBaruMasuk" component={AdminPesananBaruMasuk} options={{headerShown: false}}/>
             <Stack.Screen name="AdminPesanKonfirmasi" component={AdminPesanKonfirmasi} options={{headerShown: false}}/>
+            <Stack.Screen name="AdminKonfirmasiDriver" component={AdminKonfirmasiDriver} options={{headerShown: false}}/>
             <Stack.Screen name="BuangSampah" component={BuangSampah} options={{headerShown: false}}/>
+            <Stack.Screen name="DapatPenjemputan" component={DapatPenjemputan} options={{headerShown: false}}/>
             <Stack.Screen name="EmailTerdaftar" component={EmailTerdaftar} options={{headerShown: false}}/>
             <Stack.Screen name="EmailVerifi" component={EmailVerifi} options={{headerShown: false}}/>
             <Stack.Screen name="HomeBeranda" component={HomeBeranda} options={{headerShown: false}}/>

@@ -4,7 +4,9 @@ import AdminMateri from './AdminMateri';
 import AdminPengguna from './AdminPengguna';
 import AdminPesananBaruMasuk from './AdminPesananBaruMasuk';
 import AdminPesanKonfirmasi from './AdminPesanKonfirmasi';
+import AdminKonfirmasiDriver from './AdminKonfirmasiDriver';
 import BuangSampah from './BuangSampah';
+import DapatPenjemputan from './DapatPenjemputan';
 import EmailTerdaftar from './EmailTerdaftar';
 import EmailVerifi from './EmailVerifi';
 import HomeBeranda from './HomeBeranda';
@@ -21,9 +23,11 @@ import SplashScreen from './SplashScreen';
 import UbahProfile from './UbahProfile';
 
 
+
 export {
     AdminDataPengguna, AdminHome, AdminMateri, 
-    AdminPengguna, AdminPesananBaruMasuk, AdminPesanKonfirmasi,
+    AdminPengguna, AdminPesananBaruMasuk, AdminPesanKonfirmasi, 
+    AdminKonfirmasiDriver, DapatPenjemputan,
     BuangSampah, EmailTerdaftar, EmailVerifi, HomeBeranda, 
     HomeGuide, HomeMateri, HomeTukar, LandingPage1, LandingPage2,
     Login, Pendaftaran, Profile, Sidebar, SplashScreen,

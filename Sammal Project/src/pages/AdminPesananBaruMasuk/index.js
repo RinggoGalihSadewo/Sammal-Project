@@ -37,7 +37,7 @@ const AdminPesananBaruMasuk = ({navigation}) => {
 					</View>
 					<View>
 						<Text style={{fontSize: 12, marginTop: 4}}>Waktu : 2021/05/01 12:30 WIB</Text>
-						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}}>
+						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}} onPress={() => navigation.navigate('AdminKonfirmasiDriver')}>
 							<Text style={{color: 'white'}}>Konfirmasi</Text>
 						</TouchableOpacity>
 					</View>
@@ -66,7 +66,7 @@ const AdminPesananBaruMasuk = ({navigation}) => {
 					</View>
 					<View>
 						<Text style={{fontSize: 12, marginTop: 4}}>Waktu : 2021/05/01 12:30 WIB</Text>
-						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}}>
+						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}} onPress={() => navigation.navigate('AdminKonfirmasiDriver')}>
 							<Text style={{color: 'white'}}>Konfirmasi</Text>
 						</TouchableOpacity>
 					</View>
@@ -95,7 +95,7 @@ const AdminPesananBaruMasuk = ({navigation}) => {
 					</View>
 					<View>
 						<Text style={{fontSize: 12, marginTop: 4}}>Waktu : 2021/05/01 12:30 WIB</Text>
-						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}}>
+						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}} onPress={() => navigation.navigate('AdminKonfirmasiDriver')}>
 							<Text style={{color: 'white'}}>Konfirmasi</Text>
 						</TouchableOpacity>
 					</View>
@@ -124,7 +124,7 @@ const AdminPesananBaruMasuk = ({navigation}) => {
 					</View>
 					<View>
 						<Text style={{fontSize: 12, marginTop: 4}}>Waktu : 2021/05/01 12:30 WIB</Text>
-						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}}>
+						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}} onPress={() => navigation.navigate('AdminKonfirmasiDriver')}>
 							<Text style={{color: 'white'}}>Konfirmasi</Text>
 						</TouchableOpacity>
 					</View>
@@ -153,7 +153,7 @@ const AdminPesananBaruMasuk = ({navigation}) => {
 					</View>
 					<View>
 						<Text style={{fontSize: 12, marginTop: 4}}>Waktu : 2021/05/01 12:30 WIB</Text>
-						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}}>
+						<TouchableOpacity style={{borderBottomRightRadius: 10, borderTopLeftRadius: 10, backgroundColor: '#3A6F27', width: 89, height: 25, justifyContent: 'center', alignItems: 'center', marginLeft: 118, marginTop: 10}} onPress={() => navigation.navigate('AdminKonfirmasiDriver')}>
 							<Text style={{color: 'white'}}>Konfirmasi</Text>
 						</TouchableOpacity>
 					</View>

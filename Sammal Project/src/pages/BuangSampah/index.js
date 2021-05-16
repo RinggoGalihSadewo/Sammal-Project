@@ -1,9 +1,8 @@
 import { StatusBar, Touchable, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image} from 'react-native';
-
-
 // import CheckBox from '@react-native-community/checkbox';
+
 
 const BuangSampah = ({navigation}) =>  {
   return (
@@ -27,6 +26,13 @@ const BuangSampah = ({navigation}) =>  {
           <Image
             source={require('../../assets/gps.png')} style={{width: 280, height: 145, marginTop: 5}}
           />        
+        </View>
+
+        <View style={styles.forms}>
+              <TextInput
+                style={styles.input}
+                placeholder="Masukan Alamat Lengkap"
+              />
         </View>
 
         <View style={{width: 340, marginTop: 15, flexDirection: 'row', justifyContent: 'center'}}>  
@@ -54,6 +60,14 @@ const BuangSampah = ({navigation}) =>  {
                         <Text style={{marginLeft: 5, marginTop: 3}}>Unorganik</Text>
                     </View>                          
                 </View>  */}
+
+            <View style={styles.forms}>
+              <TextInput
+                style={styles.input}
+                placeholder="Organik / Unorganik"
+              />
+            </View>    
+
           </View>                
         </View>
 
@@ -61,6 +75,7 @@ const BuangSampah = ({navigation}) =>  {
           <Button
             title="MINTA JEMPUT"
             color="#3A6F27"
+            onPress={() => navigation.navigate('DapatPenjemputan')}
           />  
         </View>        
 

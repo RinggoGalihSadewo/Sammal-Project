@@ -7,7 +7,7 @@ const Sidebar = ({navigation}) =>  {
     <View style={styles.container}>
       <View style={styles.sidebar}>
         <View style={{marginTop: 32}}>
-            <Text style={{fontStyle: 'italic'}}>Sammal Beta Version</Text>
+            <Text style={{fontStyle: 'italic'}}>Sampah Amal</Text>
         </View>
         <TouchableOpacity style={styles.btnHome} onPress={() => navigation.goBack()}>
 			  <Image

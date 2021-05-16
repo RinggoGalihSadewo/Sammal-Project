@@ -2,10 +2,10 @@ import { StatusBar, Touchable, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
 
-const AdminDataPengguna = () => {
+const AdminDataPengguna = ({navigation}) => {
   return (
     <View style={styles.container}>
-		<TouchableOpacity style={styles.btnHome}>
+		<TouchableOpacity style={styles.btnHome} onPress={() => navigation.goBack()}>
 			<Image
 				source={require('../../assets/btnBack.png')} style={{width: 20, height: 20}} 
 			/>
@@ -35,20 +35,21 @@ const AdminDataPengguna = () => {
 		  />
         </View>
 
-		<View style={{alignItems: 'center', width: 300}}>
+		{/* <View style={{alignItems: 'center', width: 300}}>
         <View style={styles.btnDaftar}>
           <Button
             title="SIMPAN"
             color="#3A6F27"
           />  
         </View>
-		</View>
+		</View> */}
 
 		<View style={{alignItems: 'center', width: 300}}>
         <View style={styles.btnHapus}>
           <Button
             title="HAPUS AKUN"
             color="#FF0000"
+            onPress={() => navigation.goBack()}
           />  
         </View>
 		</View>

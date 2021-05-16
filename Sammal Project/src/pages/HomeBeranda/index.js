@@ -81,62 +81,39 @@ const HomeBeranda = ({navigation}) =>  {
 				
 				<View style={{flexDirection: 'row'}}>
 				<View style={styles.content}>
-					<Text style={{color: 'white', fontWeight: 'bold'}}>Organik?</Text>
-					<Text style={{color: 'white', fontWeight: 'bold'}}>Non -</Text>
-					<Text style={{color: 'white', fontWeight: 'bold'}}>Organik?</Text>
 				</View>
-				<View style={styles.content2}>
+				</View>
 
+				<View style={{flexDirection: 'row'}}>
+				<View style={styles.content}>
 				</View>
 				</View>
+
+				<TouchableOpacity
+					style={styles.btnTrash}
+					onPress={() => navigation.navigate('BuangSampah')}
+				>
+				<Image
+					source={require('../../assets/iconTrash.png')} style={{width: 26, height: 26}}
+				/>
+				</TouchableOpacity>					
+
+				<View style={{flexDirection: 'row'}}>
+				<View style={{		width: 300,
+		height: 169,
+		backgroundColor: '#F3F3F3',
+		borderRadius: 10,
+		marginTop: -10,
+		justifyContent: 'center',
+		paddingLeft: 18,}}>
+				</View>
+				</View>
+
+				<View style={{flexDirection: 'row'}}>
+				<View style={styles.content}>
+				</View>
+				</View>																
 				
-				<View style={{flexDirection: 'row'}}>
-				<View style={styles.content}>
-
-				</View>
-				<View style={styles.content2}>
-
-				</View>				
-				</View>
-
-				<View>
-
-				<View style={{flexDirection: 'row'}}>
-					<View style={styles.content}>
-
-					</View>
-					<View style={styles.content2}>
-
-					</View>					
-				</View>
-					
-					<TouchableOpacity
-						style={styles.btnTrash}
-						onPress={() => navigation.navigate('BuangSampah')}
-					>
-					<Image
-						source={require('../../assets/iconTrash.png')} style={{width: 26, height: 26}}
-					/>
-					</TouchableOpacity>			
-				</View>
-
-				<View style={{flexDirection: 'row', marginTop: -30}}>
-				<View style={styles.content}>
-
-				</View>
-				<View style={styles.content2}>
-
-				</View>
-				</View>
-
-				<View style={{flexDirection: 'row'}}>
-				<View style={styles.content}>
-
-				</View>
-				<View style={styles.content2}>
-
-				</View>				
-				</View>
 			</View>
 		</View>
 
@@ -229,9 +206,9 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'		
 	},
 	content: {
-		width: 123,
-		height: 95,
-		backgroundColor: '#3A6F27',
+		width: 300,
+		height: 169,
+		backgroundColor: '#F3F3F3',
 		borderRadius: 10,
 		marginTop: 17,
 		justifyContent: 'center',
