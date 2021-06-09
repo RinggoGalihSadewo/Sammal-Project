@@ -19,7 +19,7 @@ class BeritaSampahSeeder extends Seeder
         DB::table('berita_sampahs')->insert([
             [
                 'user_id' => 1,
-                'deskripsi' => 'Sampah di Lampung menjadi emas semua!',
+                // 'deskripsi' => 'Sampah di Lampung menjadi emas semua!',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],

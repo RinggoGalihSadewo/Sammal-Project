@@ -1,8 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image, TouchableOpacity, ScrollView } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const HomeGuide = ({navigation}) =>  {
+
+	const [nameSession, sessionNama]        =  useState('');
+    const [idSession, setIDSession]         =  useState('');
+    const [dataKendaraan, setDataKendaraan] =  useState([]);    
+
+    useEffect(() => {
+		AsyncStorage.getItem('sessionNama').then((user_name) => {
+            if (user_name) {
+                sessionNama(user_name);
+            }
+        });
+		AsyncStorage.getItem('sessionID').then((id) => {
+            if(id){
+                setIDSession(id);
+            }
+        });  
+    });
 
   return (
     <ScrollView style={styles.container}>
@@ -31,7 +49,7 @@ const HomeGuide = ({navigation}) =>  {
 		<View style={{alignItems: 'center'}}>
 		<View style={styles.name}>
 			<Text style={{color: '#767676'}}>Hallo</Text>
-			<Text style={{fontSize: 20, fontWeight: 'bold'}}>Agung!</Text>
+			<Text style={{fontSize: 20, fontWeight: 'bold'}}>{nameSession}</Text>
 		</View>
 		
 		<View style={styles.saldo}>
@@ -40,7 +58,7 @@ const HomeGuide = ({navigation}) =>  {
 				<Image
 					source={require('../../assets/iconDollar.png')}
 				/>
-				<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}> 2000</Text>
+				<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}> 5000</Text>
 			</View>
 		</View>
 		</View>
@@ -76,6 +94,12 @@ const HomeGuide = ({navigation}) =>  {
       </View>
     
       <View style={styles.imageGuide}>
+        <Image
+          source={require('../../assets/panduan1.png')} style={{width: 300, height: 130}}
+        />
+      </View>
+
+      {/* <View style={styles.imageGuide}>
 
       </View>
 
@@ -89,11 +113,7 @@ const HomeGuide = ({navigation}) =>  {
 
       <View style={styles.imageGuide}>
 
-      </View>
-
-      <View style={styles.imageGuide}>
-
-      </View>                        
+      </View>                         */}
     
     </View>                
     </ScrollView>

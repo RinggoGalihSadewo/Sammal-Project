@@ -27,19 +27,41 @@ class BuangSampahController extends Controller
      */
     public function create(Request $request)
     {
-        //
-
         $this->validate($request, [
-            'waktu_jemput' => 'required | date_format:Y-m-d H:i:s',
-            'lokasi_jemput' => 'required', 'string',
-            'estimasi_berat_sampah' => 'required|numeric|min:1|max:25',
-            'kategori_sampah' => 'required', 'string',
+            'waktu_jemput' => 'required ',
+            'lokasi_jemput' => 'required',
+            'estimasi_berat_sampah' => 'required',
+            'kategori_sampah' => 'required',
         ]);
-        $buang_sampah = buang_sampah::create($request->all());
-        return response()->json($buang_sampah);
-    }
 
+        $id = $request->input('user_id');
+        $waktu_jemput = $request->input('waktu_jemput');
+        $lokasi_jemput = $request->input('lokasi_jemput');
+        $estimasi_berat_sampah = $request->input('estimasi_berat_sampah');
+        $kategori_sampah = $request->input('kategori_sampah');
+
+        $buang_sampah = new buang_sampah();
+        $buang_sampah->user_id = $id;
+        $buang_sampah->waktu_jemput = $waktu_jemput;
+        $buang_sampah->lokasi_jemput = $lokasi_jemput;
+        $buang_sampah->estimasi_berat_sampah = $estimasi_berat_sampah;
+        $buang_sampah->kategori_sampah = $kategori_sampah;
+
+
+        if ($buang_sampah->save()) {
+            return response()->json([
+                'status'    => true,
+                'message'   => 'Buang Sampah Berhasil Diproses',
+            ], 201);
+        } else {
+            return response()->json([
+                'status'    => false,
+                'message'   => 'Buang Sampah Gagal',
+            ], 400);
+        }
+    }
     /**
+     * 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

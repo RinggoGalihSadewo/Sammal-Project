@@ -14,16 +14,18 @@ class CreateTukarSaldosTable extends Migration
     public function up()
     {
         Schema::create('tukar_saldos', function (Blueprint $table) {
-            $table->increments('transaksi_id');
-            $table->integer('user_id')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->integer('jumlah_barang');
             $table->timestamps();
-        });
-        Schema::table('tukar_saldos', function (Blueprint $table) {
-            $table->foreign('user_id')->references('user_id')->on('users');
-            // ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
+    //     Schema::table('tukar_saldos', function (Blueprint $table) {
+    //         $table->foreign('user_id')->references('user_id')->on('users');
+    //         // ->onDelete('cascade')->onUpdate('cascade');
+    //     });
+    // }
 
     /**
      * Reverse the migrations.

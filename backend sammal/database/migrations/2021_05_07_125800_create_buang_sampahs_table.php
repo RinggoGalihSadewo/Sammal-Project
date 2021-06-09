@@ -14,19 +14,14 @@ class CreateBuangSampahsTable extends Migration
     public function up()
     {
         Schema::create('buang_sampahs', function (Blueprint $table) {
-            $table->id('jemput_id');
-            $table->integer('user_id')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->dateTime('waktu_jemput');
             $table->string('lokasi_jemput', 100);
             $table->integer('estimasi_berat_sampah');
             $table->char('kategori_sampah');
             $table->timestamps();
-        });
-
-        // $table->foreignId("nama_kolom")->reference("id tabel yang mau dihubungin")->on("nama table yang mau dihubungin");
-        Schema::table('buang_sampahs', function (Blueprint $table) {
-            $table->foreign('user_id')->references('user_id')->on('users');
-            // ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
     /**

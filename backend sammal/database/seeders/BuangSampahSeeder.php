@@ -36,24 +36,6 @@ class BuangSampahSeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s'),
                 'upated_at' => date('Y-m-d H:i:s'),
             ],
-            [
-                'user_id' => 3,
-                'waktu_jemput' => '2021-05-09 00:22:25',
-                'lokasi_jemput' => 'ITERA',
-                'estimasi_berat_sampah' => '5',
-                'kategori_sampah' => 'Anorganik',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-            ],
-            [
-                'user_id' => 4,
-                'waktu_jemput' => '2021-05-09 00:22:25',
-                'lokasi_jemput' => 'ITERA',
-                'estimasi_berat_sampah' => '5',
-                'kategori_sampah' => 'Anorganik',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-            ]
         ]);
 
         // buang_sampah::create($data);

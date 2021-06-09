@@ -14,15 +14,16 @@ class CreateBeritaSampahsTable extends Migration
     public function up()
     {
         Schema::create('berita_sampahs', function (Blueprint $table) {
-            $table->increments('berita_id');
-            $table->binary('deskripsi');
-            $table->integer('user_id')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            // $table->binary('deskripsi');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
-        Schema::table('berita_sampahs', function (Blueprint $table) {
-            $table->foreign('user_id')->references('user_id')->on('users');
-            // ->onDelete('cascade')->onUpdate('cascade');
-        });
+        // Schema::table('berita_sampahs', function (Blueprint $table) {
+        //     $table->foreign('user_id')->references('user_id')->on('users');
+        //     // ->onDelete('cascade')->onUpdate('cascade');
+        // });
     }
 
     /**

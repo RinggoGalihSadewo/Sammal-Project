@@ -1,8 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image, TouchableOpacity, ScrollView } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { roundToNearestPixel } from 'react-native/Libraries/Utilities/PixelRatio';
 
 const HomeBeranda = ({navigation}) =>  {
+
+	const [nameSession, sessionNama]        =  useState('');
+    const [idSession, setIDSession]         =  useState('');
+    const [dataKendaraan, setDataKendaraan] =  useState([]);    
+
+    useEffect(() => {
+		AsyncStorage.getItem('sessionNama').then((user_name) => {
+            if (user_name) {
+                sessionNama(user_name);
+            }
+        });
+		AsyncStorage.getItem('sessionID').then((id) => {
+            if(id){
+                setIDSession(id);
+            }
+        });  
+    });
 
   return (
     <ScrollView style={styles.container}>
@@ -31,7 +50,7 @@ const HomeBeranda = ({navigation}) =>  {
 		<View style={{alignItems: 'center'}}>
 		<View style={styles.name}>
 			<Text style={{color: '#767676'}}>Hallo</Text>
-			<Text style={{fontSize: 20, fontWeight: 'bold'}}>Agung!</Text>
+			<Text style={{fontSize: 20, fontWeight: 'bold'}}>{nameSession}</Text>
 		</View>
 		
 		<View style={styles.saldo}>
@@ -40,7 +59,7 @@ const HomeBeranda = ({navigation}) =>  {
 				<Image
 					source={require('../../assets/iconDollar.png')}
 				/>
-				<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}> 2000</Text>
+				<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}> 5000</Text>
 			</View>
 		</View>
 		</View>
@@ -81,14 +100,27 @@ const HomeBeranda = ({navigation}) =>  {
 				
 				<View style={{flexDirection: 'row'}}>
 				<View style={styles.content}>
+					<Image
+						source={require('../../assets/materi1.png')} style={{width: 300, height: 169}}
+					/>
 				</View>
 				</View>
 
 				<View style={{flexDirection: 'row'}}>
 				<View style={styles.content}>
+					<Image
+						source={require('../../assets/materi2.png')} style={{width: 300, height: 169}}
+					/>					
 				</View>
 				</View>
-
+				
+				<View style={{flexDirection: 'row'}}>
+				<View style={styles.content}>
+					<Image
+						source={require('../../assets/materi3.png')} style={{width: 300, height: 169}}
+					/>
+				</View>					
+				</View>
 				<TouchableOpacity
 					style={styles.btnTrash}
 					onPress={() => navigation.navigate('BuangSampah')}
@@ -96,24 +128,8 @@ const HomeBeranda = ({navigation}) =>  {
 				<Image
 					source={require('../../assets/iconTrash.png')} style={{width: 26, height: 26}}
 				/>
-				</TouchableOpacity>					
+				</TouchableOpacity>	
 
-				<View style={{flexDirection: 'row'}}>
-				<View style={{		width: 300,
-		height: 169,
-		backgroundColor: '#F3F3F3',
-		borderRadius: 10,
-		marginTop: -10,
-		justifyContent: 'center',
-		paddingLeft: 18,}}>
-				</View>
-				</View>
-
-				<View style={{flexDirection: 'row'}}>
-				<View style={styles.content}>
-				</View>
-				</View>																
-				
 			</View>
 		</View>
 
@@ -211,8 +227,6 @@ const styles = StyleSheet.create({
 		backgroundColor: '#F3F3F3',
 		borderRadius: 10,
 		marginTop: 17,
-		justifyContent: 'center',
-		paddingLeft: 18,
 	},
 	content2: {
 		width: 172,
@@ -231,9 +245,8 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		borderRadius: 13,
-		marginTop: -24,
+		marginTop: 15,
 		marginLeft: 204,
-		zIndex: 99,
 		borderWidth: 1,
 	},
 });

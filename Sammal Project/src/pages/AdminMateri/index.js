@@ -4,8 +4,8 @@ import { StyleSheet, Text, View, TextInput, Button, Image, ScrollView } from 're
 
 const AdminMateri = ({navigation}) =>{
   return (
-	<ScrollView>
     <View style={styles.container}>
+    <View style={{flex: 1}}>
 		<View style={{width: 300}}>
 			<View style={{}}>
 				<TouchableOpacity style={styles.btnBack} onPress={() => navigation.goBack()}>
@@ -26,24 +26,26 @@ const AdminMateri = ({navigation}) =>{
 			</TouchableOpacity>
 
       <View style={styles.materi}>
-
+          <Image
+						source={require('../../assets/materi1.png')} style={{width: 300, height: 169}}
+					/>
       </View>
 
       <View style={styles.materi}>
-
+          <Image
+						source={require('../../assets/materi2.png')} style={{width: 300, height: 169}}
+					/>
       </View>
 
       <View style={styles.materi}>
-
-      </View>
-
-      <View style={styles.materi}>
-
-      </View>                  
+          <Image
+						source={require('../../assets/materi3.png')} style={{width: 300, height: 169}}
+					/>
+      </View>             
 
 		</View>
+    </View>
   	</View>
-  	</ScrollView>
   );
 }
 
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
   container: {
       backgroundColor: '#fff',
       flex: 1,
-	  alignItems: 'center'
+	    alignItems: 'center'
   },
   btnBack: {
     width: 34,

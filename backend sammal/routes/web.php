@@ -21,12 +21,12 @@ $router->get('/', function () use ($router) {
 $router->post('api/register', ['uses' => 'LoginController@register']);
 $router->post('api/login', ['uses' => 'LoginController@login']);
 
-$router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($router) {
+$router->group(['prefix' => 'api'], function () use ($router) {
 
     $router->get('User', ['uses' => 'UserController@index']);
     $router->get('User/{id}', ['uses' => 'UserController@show']);
     $router->delete('User/{id}', ['uses' => 'UserController@destroy']);
-    $router->put('User/{id}', ['uses' => 'UserController@update']);
+    $router->post('user/update', ['uses' => 'UserController@update']);
     $router->post('User', ['uses' => 'UserController@create']);
 
     $router->get('buang_sampah', ['uses' => 'BuangSampahController@index']);

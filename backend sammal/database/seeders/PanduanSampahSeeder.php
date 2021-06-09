@@ -20,7 +20,7 @@ class PanduanSampahSeeder extends Seeder
             [
                 'user_id' => 1,
                 'nama_panduan' => 'Panduan Membuang Sampah berdasarkan Kategorinya',
-                'deskripsi' => 'panduan.png',
+                // 'deskripsi' => 'panduan.png',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],

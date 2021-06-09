@@ -1,8 +1,52 @@
 import { StatusBar, Touchable, TouchableOpacity } from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const UbahProfile = ({navigation}) =>  {
+
+  	const [nameSession, sessionNama]        =  useState('');
+    const [idSession, setIDSession]         =  useState('');
+    const [dataKendaraan, setDataKendaraan] =  useState([]);
+    
+    const [username, setUsername] = useState('');
+    const [passwordBaru, setPasswordBaru] = useState('');
+    const [newkecamatan, setNewKecamatan] = useState('');
+    const [userId, setUserId] = useState('');
+
+    const update = async() => {
+      await fetch("https://sammal.herokuapp.com/api/user/update", {
+              method: 'POST',
+              headers: {
+                  'Accept': 'application/json',
+                  'Content-Type' : 'application/json'
+              },
+              body: JSON.stringify({
+                'user_name' : username,
+                'password' : passwordBaru,
+                'kecamatan' : newkecamatan,
+                'user_id': userId
+              })
+          }).then(res => res.json())
+          .then(resData => {
+              alert(resData.message + " Data Berhasil di ubah, silahkan login kembali " );
+              navigation.replace('Profile');
+          })
+    }
+
+    useEffect(() => {
+		AsyncStorage.getItem('sessionNama').then((user_name) => {
+            if (user_name) {
+                sessionNama(user_name);
+            }
+        });
+		AsyncStorage.getItem('sessionID').then((id) => {
+            if(id){
+              setUserId(id);
+            }
+        });  
+    });
+
   return (
     <View style={styles.container}>
     <TouchableOpacity style={styles.btnBack} onPress={() => navigation.goBack()}>
@@ -25,32 +69,28 @@ const UbahProfile = ({navigation}) =>  {
     </View> 
 
     <View style={{alignItems: 'center', marginTop: 20}}>
+      
         <View style={styles.forms}>
           <Text style={{fontSize: 14, marginLeft: 5}}>Username</Text>
           <TextInput style={styles.input}
-            placeholder="Agungzefi"
+            // placeholder="Agungzefi"
+            onChangeText={(username) => setUsername(username) } value={username}
           />
         </View>
 
         <View style={styles.forms}>
-          <Text style={{fontSize: 14, marginLeft: 5}}>Kata Sandi Lama</Text>
-          <TextInput style={styles.input}/>
-        </View>
-
-        <View style={styles.forms}>
-          <Text style={{fontSize: 14, marginLeft: 5}}>Kata Sandi Baru</Text>
-          <TextInput style={styles.input}/>
-        </View>
-
-        <View style={styles.forms}>
-          <Text style={{fontSize: 14, marginLeft: 5}}>Konfirmasi Kata Sandi Baru</Text>
-          <TextInput style={styles.input}/>
+          <Text style={{fontSize: 14, marginLeft: 5}} secureTextEntry={true}>Password Baru</Text>
+          <TextInput style={styles.input}
+          onChangeText={(passwordBaru) => setPasswordBaru(passwordBaru) } value={passwordBaru}
+          secureTextEntry={true}
+          />
         </View>
 
         <View style={styles.forms}>
           <Text style={{fontSize: 14, marginLeft: 5}}>Kecamatan</Text>
           <TextInput style={styles.input}
-            placeholder="Kemiling"
+            // placeholder="Kemiling"
+            onChangeText={(newkecamatan) => setNewKecamatan(newkecamatan) } value={newkecamatan}
           />
         </View>
 
@@ -58,7 +98,7 @@ const UbahProfile = ({navigation}) =>  {
           <Button
             title="SIMPAN"
             color="#3A6F27"
-            onPress={() => navigation.navigate('Profile')}
+            onPress={() => update()}
           />  
         </View>
     </View>

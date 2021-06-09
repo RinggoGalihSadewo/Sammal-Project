@@ -14,15 +14,12 @@ class CreateBiayaJemputsTable extends Migration
     public function up()
     {
         Schema::create('biaya_jemputs', function (Blueprint $table) {
-            $table->integer('jumlah_biaya', 10);
-            $table->foreignId('jemput_id')->references('jemput_id')->on('buang_sampahs');
-            // $table->integer('jemput_id')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('jemput_id');
+            $table->integer('jumlah_biaya');
             $table->timestamps();
+            $table->foreign('jemput_id')->references('id')->on('buang_sampahs')->onDelete('cascade');
         });
-        // Schema::table('biaya_jemputs', function (Blueprint $table) {
-        //     $table->foreign('jemput_id')->references('jemput_id')->on('buang_sampahs');
-        //     // ->onDelete('cascade')->onUpdate('cascade');
-        // });
     }
 
     /**

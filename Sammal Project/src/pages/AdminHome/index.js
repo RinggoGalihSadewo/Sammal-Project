@@ -1,8 +1,13 @@
 import { StatusBar, Touchable, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image, ScrollView } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const AdminHome = ({navigation}) => {
+	const _logout = async() => {
+        await AsyncStorage.clear();
+        navigation.replace('Login');
+    }
   return (
     <View style={styles.container}>
 		<View style={{width: 300, flex: 1}}>
@@ -16,7 +21,7 @@ const AdminHome = ({navigation}) => {
 
 					<View>
 					<View style={{alignItems: 'center', justifyContent: 'center', marginTop: 45, marginLeft: 110}}>	
-						<TouchableOpacity style={styles.btnLogout} onPress={() => navigation.navigate('Login')}>
+						<TouchableOpacity style={styles.btnLogout} onPress={() => _logout()}>
 							<Image
 								source={require('../../assets/iconLogout.png')} style={{width: 18, height: 18}} 
 							/>

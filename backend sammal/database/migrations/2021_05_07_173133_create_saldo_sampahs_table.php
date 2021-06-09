@@ -14,17 +14,18 @@ class CreateSaldoSampahsTable extends Migration
     public function up()
     {
         Schema::create('saldo_sampahs', function (Blueprint $table) {
-            $table->increments('saldo_id');
-            $table->integer('user_id')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->integer('total_saldo');
             $table->integer('histori_berat_sampah');
             $table->char('histori_kategori_sampah');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
-        Schema::table('saldo_sampahs', function (Blueprint $table) {
-            $table->foreign('user_id')->references('user_id')->on('users');
-            // ->onDelete('cascade')->onUpdate('cascade');
-        });
+        // Schema::table('saldo_sampahs', function (Blueprint $table) {
+        //     $table->foreign('user_id')->references('user_id')->on('users');
+        //     // ->onDelete('cascade')->onUpdate('cascade');
+        // });
     }
 
     /**

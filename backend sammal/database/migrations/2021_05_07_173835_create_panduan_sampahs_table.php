@@ -14,16 +14,17 @@ class CreatePanduanSampahsTable extends Migration
     public function up()
     {
         Schema::create('panduan_sampahs', function (Blueprint $table) {
-            $table->increments('panduan_id');
-            $table->integer('user_id')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('nama_panduan');
-            $table->binary('deskripsi');
+            // $table->binary('deskripsi');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
-        Schema::table('panduan_sampahs', function (Blueprint $table) {
-            $table->foreign('user_id')->references('user_id')->on('users');
-            // ->onDelete('cascade')->onUpdate('cascade');
-        });
+        // Schema::table('panduan_sampahs', function (Blueprint $table) {
+        //     $table->foreign('user_id')->references('user_id')->on('users');
+        //     // ->onDelete('cascade')->onUpdate('cascade');
+        // });
     }
 
     /**

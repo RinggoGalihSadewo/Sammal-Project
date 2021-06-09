@@ -1,8 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image, TouchableOpacity, ScrollView, Touchable } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const HomeTukar = ({navigation}) =>  {
+
+	const [nameSession, sessionNama]        =  useState('');
+    const [idSession, setIDSession]         =  useState('');
+    const [dataKendaraan, setDataKendaraan] =  useState([]);    
+    const [saldo, setSaldo] = useState('5000');
+
+    useEffect(() => {
+		AsyncStorage.getItem('sessionNama').then((user_name) => {
+            if (user_name) {
+                sessionNama(user_name);
+            }
+        });
+		AsyncStorage.getItem('sessionID').then((id) => {
+            if(id){
+                setIDSession(id);
+            }
+        });  
+    });
+
+    const tukar = () => {
+      
+    }
+
+  var biaya = 100;
 
   return (
     <ScrollView style={styles.container}>
@@ -31,7 +56,7 @@ const HomeTukar = ({navigation}) =>  {
 		<View style={{alignItems: 'center'}}>
 		<View style={styles.name}>
 			<Text style={{color: '#767676'}}>Hallo</Text>
-			<Text style={{fontSize: 20, fontWeight: 'bold'}}>Agung!</Text>
+			<Text style={{fontSize: 20, fontWeight: 'bold'}}>{nameSession}</Text>
 		</View>
 		
 		<View style={styles.saldo}>
@@ -40,7 +65,7 @@ const HomeTukar = ({navigation}) =>  {
 				<Image
 					source={require('../../assets/iconDollar.png')}
 				/>
-				<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}> 2000</Text>
+				<Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}> {saldo}</Text>
 			</View>
 		</View>
 		</View>
@@ -79,6 +104,9 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', width: 300}}>
       <View style={styles.imageTukar}>
+        <Image
+          source={require('../../assets/T_tukar1.png')} style={{width: 216, height: 67,}}
+        />
 		{/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
@@ -101,19 +129,23 @@ const HomeTukar = ({navigation}) =>  {
             <Image
               source={require('../../assets/iconDollarTukar.png')} style={{width: 20, height: 20}}
             />
-            <Text style={{color: '#E7A705', marginLeft: 3, fontWeight: 'bold', fontSize: 17, marginTop: -2}}>200</Text>        
+            <Text style={{color: '#E7A705', marginLeft: 3, fontWeight: 'bold', fontSize: 17, marginTop: -2}}>1000</Text>        
         </View>
 
         <View>
-            <TouchableOpacity style={styles.btnTukar}>
+            <TouchableOpacity style={styles.btnTukar} onPress={() => alert('Berhasil Beramal')}>
               <Text style={{color: 'white', fontStyle: 'italic'}}>TUKAR</Text>
             </TouchableOpacity>
+            
         </View> 
       </View>      
     </View>
 
     <View style={{flexDirection: 'row', marginTop: 10, width: 300}}>
       <View style={styles.imageTukar}>
+      <Image
+          source={require('../../assets/T_tukar2.png')} style={{width: 216, height: 67,}}
+        />        
 	  {/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
@@ -136,11 +168,11 @@ const HomeTukar = ({navigation}) =>  {
             <Image
               source={require('../../assets/iconDollarTukar.png')} style={{width: 20, height: 20}}
             />
-            <Text style={{color: '#E7A705', marginLeft: 3, fontWeight: 'bold', fontSize: 17, marginTop: -2}}>200</Text>        
+            <Text style={{color: '#E7A705', marginLeft: 3, fontWeight: 'bold', fontSize: 17, marginTop: -2}}>2500</Text>        
         </View>
 
         <View>
-            <TouchableOpacity style={styles.btnTukar}>
+            <TouchableOpacity style={styles.btnTukar} onPress={() => alert('Berhasil Beramal')}>
               <Text style={{color: 'white', fontStyle: 'italic'}}>TUKAR</Text>
             </TouchableOpacity>
         </View> 
@@ -149,6 +181,9 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', marginTop: 10, width: 300}}>
       <View style={styles.imageTukar}>
+      <Image
+          source={require('../../assets/T_tukar3.png')} style={{width: 216, height: 67,}}
+        />        
 	  {/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
@@ -171,11 +206,11 @@ const HomeTukar = ({navigation}) =>  {
             <Image
               source={require('../../assets/iconDollarTukar.png')} style={{width: 20, height: 20}}
             />
-            <Text style={{color: '#E7A705', marginLeft: 3, fontWeight: 'bold', fontSize: 17, marginTop: -2}}>200</Text>        
+            <Text style={{color: '#E7A705', marginLeft: 3, fontWeight: 'bold', fontSize: 17, marginTop: -2}}>5000</Text>        
         </View>
 
         <View>
-            <TouchableOpacity style={styles.btnTukar}>
+            <TouchableOpacity style={styles.btnTukar} onPress={() => alert('Berhasil Beramal')}>
               <Text style={{color: 'white', fontStyle: 'italic'}}>TUKAR</Text>
             </TouchableOpacity>
         </View> 
@@ -184,6 +219,9 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', marginTop: 10, width: 300 }}>
       <View style={styles.imageTukar}>
+      <Image
+          source={require('../../assets/T_Aqua1dus.png')} style={{width: 216, height: 67,}}
+        />        
 	  {/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
@@ -206,11 +244,11 @@ const HomeTukar = ({navigation}) =>  {
             <Image
               source={require('../../assets/iconDollarTukar.png')} style={{width: 20, height: 20}}
             />
-            <Text style={{color: '#E7A705', marginLeft: 3, fontWeight: 'bold', fontSize: 17, marginTop: -2}}>200</Text>        
+            <Text style={{color: '#E7A705', marginLeft: 3, fontWeight: 'bold', fontSize: 17, marginTop: -2}}>450</Text>        
         </View>
 
         <View>
-            <TouchableOpacity style={styles.btnTukar}>
+            <TouchableOpacity style={styles.btnTukar} onPress={() => alert('Berhasil Beramal')}>
               <Text style={{color: 'white', fontStyle: 'italic'}}>TUKAR</Text>
             </TouchableOpacity>
         </View> 
@@ -219,6 +257,9 @@ const HomeTukar = ({navigation}) =>  {
 
     <View style={{flexDirection: 'row', marginTop: 10, width: 300}}>
       <View style={styles.imageTukar}>
+      <Image
+          source={require('../../assets/T_Aqua1dusGelas.png')} style={{width: 216, height: 67,}}
+        />           
 	  {/* <View style={{width: 50, flexDirection: 'row', marginLeft: 154, marginTop: 45}}>
 			<TouchableOpacity style={{width: 15, height: 15, borderRadius: 3, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center'}}>
 				<Image
@@ -245,7 +286,7 @@ const HomeTukar = ({navigation}) =>  {
         </View>
 
         <View>
-            <TouchableOpacity style={styles.btnTukar}>
+            <TouchableOpacity style={styles.btnTukar} onPress={() => alert('Berhasil Beramal')}>
               <Text style={{color: 'white', fontStyle: 'italic'}}>TUKAR</Text>
             </TouchableOpacity>
         </View> 

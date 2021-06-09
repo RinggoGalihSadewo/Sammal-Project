@@ -14,18 +14,19 @@ class CreateBarangAmalsTable extends Migration
     public function up()
     {
         Schema::create('barang_amals', function (Blueprint $table) {
-            $table->increments('barang_id');
-            $table->integer('user_id')->unsigned();
+            $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->integer('harga_barang');
             $table->integer('jumlah_barang');
             $table->char('nama_barang');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
-        Schema::table('barang_amals', function (Blueprint $table) {
-            $table->foreign('user_id')->references('user_id')->on('users');
-            // ->onDelete('cascade')->onUpdate('cascade');
-        });
+        // Schema::table('barang_amals', function (Blueprint $table) {
+        //     $table->foreign('user_id')->references('user_id')->on('users');
+        //     // ->onDelete('cascade')->onUpdate('cascade');
+        // });
     }
 
     /**

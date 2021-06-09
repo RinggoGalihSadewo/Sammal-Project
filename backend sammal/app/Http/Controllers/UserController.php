@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Test\Constraint\ResponseHeaderSame;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -54,6 +55,7 @@ class UserController extends Controller
             'email' => $request->input('email'),
             'email_verified_at' => $request->input('email_verified_at'),
             'foto_profil' => $gambar,
+            'role' => $request->input('role'),
             'remember_token' => $request->input('remember_token'),
             'kecamatan' => $request->input('kecamatan')
         ];
@@ -108,10 +110,31 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
-        User::where('user_id', $id)->update($request->all());
+
+        $id = $request->input('user_id');
+
+        $update = User::where('id', $id)->update([
+            'user_name' => $request->input('user_name'),
+            'password' => Hash::make($request->input('password')),
+            'kecamatan' => $request->input('kecamatan'),
+        ]);
+
+        if ($update) {
+            return response()->json([
+                'status'    => true,
+                'message'   => 'Berhasil Update Data',
+                'data'      => $request->input('password')
+            ], 201);
+        } else {
+            return response()->json([
+                'status'    => false,
+                'message'   => 'gagal Update Data',
+                'data'      => $request->input('password')
+            ], 201);
+        }
+
         return response()->json("Data berhasil diupdate");
     }
 

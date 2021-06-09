@@ -1,8 +1,45 @@
 import { StatusBar, Touchable, TouchableOpacity } from 'react-native';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const Profile = ({navigation}) =>  {
+
+	const _logout = async() => {
+        await AsyncStorage.clear();
+        navigation.replace('Login');
+    }
+
+	const [nameSession, sessionNama]        =  useState('');
+	const [emailSession, sessionEmail]        =  useState('');
+	const [kecamatanSession, sessionKecamatan]        =  useState('');
+    const [idSession, setIDSession]         =  useState('');
+    const [dataKendaraan, setDataKendaraan] =  useState([]);    
+
+    useEffect(() => {
+		AsyncStorage.getItem('sessionNama').then((user_name) => {
+            if (user_name) {
+                sessionNama(user_name);
+            }
+        });
+		AsyncStorage.getItem('sessionEmail').then((email) => {
+            if (email) {
+                sessionEmail(email);
+            }
+        });
+		AsyncStorage.getItem('sessionKecamatan').then((kecamatan) => {
+            if (kecamatan) {
+                sessionKecamatan(kecamatan);
+            }
+        });
+		AsyncStorage.getItem('sessionID').then((id) => {
+            if(id){
+                setIDSession(id);
+            }
+        });  
+    }, [nameSession, emailSession, kecamatanSession]);
+
   return (
     <View style={styles.container}>
 		<TouchableOpacity style={styles.btnHome} onPress={() => navigation.navigate('HomeBeranda')}>
@@ -17,17 +54,17 @@ const Profile = ({navigation}) =>  {
 					source={require('../../assets/superman.png')} style={{width: 95, height: 95}}
 				/>
 			</View>
-			<Text style={{fontSize: 18, fontWeight: 'bold', marginTop: 8}}>agungzefi</Text>
+			<Text style={{fontSize: 18, fontWeight: 'bold', marginTop: 8}}>{nameSession}</Text>
 		</View>
 
 		<View style={styles.email}>
 				<Text>Email</Text>
-				<Text style={{fontSize: 12, color: '#868686', marginTop: 4}}>agungzefi@gmail.com</Text>
+				<Text style={{fontSize: 12, color: '#868686', marginTop: 4}}>{emailSession}</Text>
 		</View>
 
 		<View style={styles.kecamatan}>
 				<Text>kecamatan</Text>
-				<Text style={{fontSize: 12, color: '#868686', marginTop: 4}}>Kemiling</Text>
+				<Text style={{fontSize: 12, color: '#868686', marginTop: 4}}>{kecamatanSession}</Text>
 		</View>
 
 		<View style={{alignItems: 'center', justifyContent: 'center'}}>
@@ -40,7 +77,7 @@ const Profile = ({navigation}) =>  {
 		</View>
 
 	<View style={{alignItems: 'center', justifyContent: 'center', marginTop: 167}}>	
-		<TouchableOpacity style={styles.btnLogout} onPress={() => navigation.navigate('Login')}>
+		<TouchableOpacity style={styles.btnLogout} onPress={() => _logout()}>
 			<Image
 				source={require('../../assets/iconLogout.png')} style={{width: 18, height: 18}} 
 			/>
